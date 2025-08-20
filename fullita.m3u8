@@ -5,3 +5,6 @@ https://mvajro-proxydd.hf.space/proxy/m3u?url=https://daddylive.dad/embed/stream
 #EXTINF:-1 tvg-id="UEFA Champions League - Rangers vs Club Brugge" tvg-name="20:00 UEFA Champions League : Rangers vs Club Brugge - 19/01/25" tvg-logo="https://raw.githubusercontent.com/cribbiox/eventi/refs/heads/main/ddsport.png" group-title="Soccer", Sky Sport Arena IT
 https://mvajro-proxydd.hf.space/proxy/m3u?url=https://daddylive.dad/embed/stream-462.php
 
+#EXTINF:-1 tvg-id="UEFA Champions League - Bodø / Glimt vs Sturm Graz" tvg-name="20:00 UEFA Champions League : Bodø / Glimt vs Sturm Graz - 20/01/25" tvg-logo="https://raw.githubusercontent.com/cribbiox/eventi/refs/heads/main/ddsport.png" group-title="Soccer", Sky Sport Calcio IT
+https://mvajro-proxydd.hf.space/proxy/m3u?url=https://daddylive.dad/embed/stream-870.php
+
