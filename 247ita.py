@@ -196,8 +196,10 @@ def search_streams(file_path, keyword):
         for link in links:
             if keyword.lower() in link.text.lower():
                 href = link['href']
-                stream_number = href.split('-')[-1].replace('.php', '')
-                stream_name = link.text.strip()
+                import re
+                match_id = re.search(r'\d+', href)
+                stream_number = match_id.group(0) if match_id else href.split('-')[-1].replace('.php', '')
+                stream_name = " ".join(link.text.strip().splitlines())
                 match = (stream_number, stream_name)
 
                 if match not in matches:
