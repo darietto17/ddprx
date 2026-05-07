@@ -365,7 +365,7 @@ def generate_unique_ids(count, seed=42):
     return [str(uuid.UUID(int=random.getrandbits(128))) for _ in range(count)]
 
 def loadJSON(filepath):
-    with open(filepath, 'r', encoding='utf-8') as file:
+    with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
         return json.load(file)
 
 def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
