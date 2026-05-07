@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-PRXLINK = "https://mvajro-proxydd.hf.space" # non mettere lo / finale
+PRXLINK = "https://darietto17-proxy.hf.space" # non mettere lo / finale
 
 # Costanti
 NUM_CHANNELS = 10000
