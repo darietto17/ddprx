@@ -59,12 +59,12 @@ jobs:
           # Stage all changes
           git add .
           
-         # Esegui il commit solo se ci sono modifiche
+          # Esegui il commit solo se ci sono modifiche
           git diff-index --quiet HEAD || git commit -m "Update world247 $(date +'%H:%M')"
     
           # RECUPERA I CAMBIAMENTI REMOTI (Risolve il problema)
           # --rebase serve a mettere i tuoi nuovi file sopra gli ultimi commit remoti
           git pull --rebase origin main
     
-            # Spingi i cambiamenti
+          # Spingi i cambiamenti
           git push origin main
