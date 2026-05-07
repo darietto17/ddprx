@@ -374,10 +374,10 @@ def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
     # Verifica se è un canale Tennis Stream
     if channel_name and "Tennis Stream" in channel_name:
         print(f"Canale Tennis Stream rilevato, utilizzo link fisso per: {event_name}")
-        return "https://dlhd.dad/embed/stream-576.php"
+        return "https://daddylive.dad/embed/stream-576.php"
     
     # Restituisci direttamente l'URL senza fare richieste HTTP
-    return f"https://dlhd.dad/embed/stream-{dlhd_id}.php"
+    return f"https://daddylive.dad/embed/stream-{dlhd_id}.php"
 
     # Verifica se è un canale tennis
     is_tennis_channel = "tennis" in event_name.lower() or "atp" in event_name.lower() or "wta" in event_name.lower()
@@ -561,7 +561,7 @@ def should_include_channel(channel_name, event_name, sport_key):
 
 def process_events():
     # Fetch JSON schedule
-    # fetcher.fetchHTML(DADDY_JSON_FILE, "https://dlhd.dad/schedule/schedule-generated.json")
+    # fetcher.fetchHTML(DADDY_JSON_FILE, "https://daddylive.dad/schedule/schedule-generated.json")
 
     # Load JSON data
     dadjson = loadJSON(DADDY_JSON_FILE)
