@@ -385,14 +385,14 @@ def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
     try:
         # Semplice richiesta all'URL senza elaborazione complessa
         response = requests.get(
-            f"https://daddylive.{DADDY}/embed/stream-{dlhd_id}.php",
+            f"https://dlhd.pk/embed/stream-{dlhd_id}.php",
             headers=headers,
             timeout=10
         )
         response.raise_for_status()
         
         # Restituisci direttamente l'URL
-        return f"https://daddylive.{DADDY}/embed/stream-{dlhd_id}.php"
+        return f"https://dlhd.pk/embed/stream-{dlhd_id}.php"
         
     except requests.exceptions.RequestException as e:
         # Se è un canale tennis con errore 404, restituisci l'URL placeholder
@@ -415,7 +415,7 @@ def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
         try:
             # Use timeout for all requests
             response = requests.get(
-                f"https://daddylive.{DADDY}/embed/stream-{dlhd_id}.php",
+                f"https://dlhd.pk/embed/stream-{dlhd_id}.php",
                 headers=headers,
                 timeout=base_timeout
             )
