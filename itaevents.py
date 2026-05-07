@@ -374,10 +374,10 @@ def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
     # Verifica se è un canale Tennis Stream
     if channel_name and "Tennis Stream" in channel_name:
         print(f"Canale Tennis Stream rilevato, utilizzo link fisso per: {event_name}")
-        return "https://dlhd.pk/embed/stream-576.php"
+        return "https://dlhd.pk/stream/stream-576.php"
     
     # Restituisci direttamente l'URL senza fare richieste HTTP
-    return f"https://dlhd.pk/embed/stream-{dlhd_id}.php"
+    return f"https://dlhd.pk/stream/stream-{dlhd_id}.php"
 
     # Verifica se è un canale tennis
     is_tennis_channel = "tennis" in event_name.lower() or "atp" in event_name.lower() or "wta" in event_name.lower()
@@ -385,14 +385,14 @@ def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
     try:
         # Semplice richiesta all'URL senza elaborazione complessa
         response = requests.get(
-            f"https://dlhd.pk/embed/stream-{dlhd_id}.php",
+            f"https://dlhd.pk/stream/stream-{dlhd_id}.php",
             headers=headers,
             timeout=10
         )
         response.raise_for_status()
         
         # Restituisci direttamente l'URL
-        return f"https://dlhd.pk/embed/stream-{dlhd_id}.php"
+        return f"https://dlhd.pk/stream/stream-{dlhd_id}.php"
         
     except requests.exceptions.RequestException as e:
         # Se è un canale tennis con errore 404, restituisci l'URL placeholder
@@ -415,7 +415,7 @@ def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
         try:
             # Use timeout for all requests
             response = requests.get(
-                f"https://dlhd.pk/embed/stream-{dlhd_id}.php",
+                f"https://dlhd.pk/stream/stream-{dlhd_id}.php",
                 headers=headers,
                 timeout=base_timeout
             )
