@@ -8,6 +8,9 @@ on:
 jobs:
   update-files:
     runs-on: ubuntu-latest
+    permissions:
+      # Dai permessi di scrittura ai contenuti del repo
+      contents: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: false
