@@ -49,7 +49,7 @@ def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
     print(f"Getting stream link for channel ID: {dlhd_id} - {event_name} on {channel_name}...")
     
     # Restituisci direttamente l'URL senza fare richieste HTTP
-    return f"https://daddylive.dad/embed/stream-{dlhd_id}.php"
+    return f"https://daddylive.lol/embed/stream-{dlhd_id}.php"
 
 # Rimuove i file esistenti per garantirne la rigenerazione
 for file in [M3U8_OUTPUT_FILE]: # daddyLiveChannelsFileName kept for file removal consistency, but not used  tolto (, DADDY_JSON_FILE)
@@ -463,7 +463,7 @@ total_schedule_channels = 0 # Counter for total schedule channels attempted
 total_247_channels = 0 # Counter for total 24/7 channels attempted - will remain 0
 
 # Scarica il file JSON con la programmazione
-# fetcher.fetchHTML(DADDY_JSON_FILE, "https://daddylive.dad/schedule/schedule-generated.json")
+# fetcher.fetchHTML(DADDY_JSON_FILE, "https://daddylive.lol/schedule/schedule-generated.json")
 
 # Carica i dati dal JSON
 dadjson = loadJSON(DADDY_JSON_FILE)

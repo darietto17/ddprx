@@ -63,7 +63,7 @@ def get_stream_link(dlhd_id, event_name="", channel_name="", max_retries=3):
     print(f"Getting stream link for channel ID: {dlhd_id} - {event_name} on {channel_name}...")
     
     # Restituisci direttamente l'URL senza fare richieste HTTP
-    return f"https://daddylive.dad/embed/stream-{dlhd_id}.php"
+    return f"https://daddylive.lol/embed/stream-{dlhd_id}.php"
 
 def clean_group_title(sport_key):
     """Clean the sport key to create a proper group-title"""
@@ -99,7 +99,7 @@ def should_include_channel(channel_name, event_name, sport_key):
 
 def process_events():
     # Fetch JSON schedule
-    # fetcher.fetchHTML(DADDY_JSON_FILE, "https://daddylive.dad/schedule/schedule-generated.json")
+    # fetcher.fetchHTML(DADDY_JSON_FILE, "https://daddylive.lol/schedule/schedule-generated.json")
 
     # Load JSON data
     dadjson = loadJSON(DADDY_JSON_FILE)
